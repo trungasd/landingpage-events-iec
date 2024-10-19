@@ -1,0 +1,679 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General styling for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+}
+
+/* common */
+.common {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+}
+
+/* sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+    padding-top: 20px;
+    overflow: auto;
+    z-index: 10;
+    background-color: #10375c;
+}
+
+.sidebar__user {
+    margin-bottom: 50px;
+}
+
+.sidebar__user-name {
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    color: #fff;
+    font-size: 20px;
+}
+
+.sidebar__user-designation {
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+    color: #fff;
+    font-size: 14px;
+}
+
+.sidebar__menu {
+
+}
+
+.sidebar__menu-list {
+    padding: 0px 15px;
+}
+
+.sidebar__menu-list li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+
+.sidebar__menu-item {
+    text-decoration: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 20px 25px;
+    color: #fff;
+    transition: background-color 0.25s, color 0.25s, border-radius 0.25s; /* Áp dụng transition cho các thuộc tính */
+}
+
+.sidebar__menu-item:hover {
+    background-color: #c6defd;
+    color: #10375c;
+    border-radius: 5px;
+}
+
+.action {
+    background-color: #c6defd;
+    color: #10375c;
+    border-radius: 5px;
+}
+
+
+/* content */
+.content {
+    width: 80%;
+    background-color: #f5f5f5;
+}
+
+.content__header {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #10375c;
+    width: 80%;
+    height: 60px;
+    border-left: #12314f solid 3px;
+}
+
+/* Clock styling */
+#clock {
+    font-weight: 600;
+    color: #fff;
+    font-size: 13px;
+    padding-left: 20px;
+}
+
+.date {
+    display: block;
+}
+
+.logout {    
+    margin-right: 15px;
+    padding: 21px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #10375c;
+    color: #fff;
+    transition: background-color 0.25s, color 0.25s, border-radius 0.25s; /* Áp dụng transition cho các thuộc tính */
+}
+
+.logout:hover {
+    color: #10375c;
+    background-color: #c6defd;
+    transition: 0.5s;
+}
+
+
+/* Manager Product */
+.content__body {
+    margin-top: 80px;
+}
+
+.content__title {
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+/* wrap */
+
+.wrap-content__enter {
+    background-color: #fff;
+    margin-top: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+}
+
+.content__enter {
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+/* search bar */
+.wrap__search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.input__search {
+    width: 92%;
+    height: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: #999 solid 1px;
+    border-radius: 5px;
+}
+
+.btn__search {
+    width: 8%;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__search:hover {
+    background-color: #0069d9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
+/* form enter product */
+.wrap__enter-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.item__enter-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.item__enter-info label {
+    font-size: 16px;
+    padding-bottom: 10px;
+}
+
+.item__enter-info input {
+    padding: 10px;
+    font-size: 16px;
+    height: 25px;
+    border-radius: 5px;
+    border: #999 solid 1px;
+    margin-right: 10px;
+}
+
+.btn__add-product {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__add-product:hover {
+    background-color: #0069d9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__update-product {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__update-product:hover {
+    background-color: #0069d9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__delete-product {
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e04522;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__delete-product:hover {
+    background-color: #d32f2f;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__edit-product {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__edit-product:hover {
+    background-color: #ffab00;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Style for the table container */
+.wrap__product-list {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic table styling */
+.table__product {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Header styling */
+.table__product thead th {
+    padding: 12px 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Body styling */
+.table__product tbody td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    color: #333;
+}
+
+/* Center align the text in the table */
+.table__product th, .table__product td {
+    text-align: center;
+}
+
+/* Make rows alternate background colors for better readability */
+.table__product tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Add a subtle hover effect for rows */
+.table__product tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .table__product thead {
+        display: none;
+    }
+
+    .table__product tbody tr {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .table__product tbody td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table__product tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+/* Manager News */
+
+.btn__add-news {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__add-news:hover {
+    background-color: #0069d9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__update-news {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__update-news:hover {
+    background-color: #0069d9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__delete-news {
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e04522;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__delete-news:hover {
+    background-color: #d32f2f;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__edit-news {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__edit-news:hover {
+    background-color: #ffab00;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Style for the table container */
+.wrap__news-list {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic table styling */
+.table__news {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Header styling */
+.table__news thead th {
+    padding: 12px 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Body styling */
+.table__news tbody td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    color: #333;
+}
+
+/* Center align the text in the table */
+.table__news th, .table__news td {
+    text-align: center;
+}
+
+/* Make rows alternate background colors for better readability */
+.table__news tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Add a subtle hover effect for rows */
+.table__news tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .table__news thead {
+        display: none;
+    }
+
+    .table__news tbody tr {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .table__news tbody td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table__news tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+
+/* Manager Event */
+
+.btn__add-event {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__add-event:hover {
+    background-color: #0069d9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__update-event {
+    display: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn__update-event:hover {
+    background-color: #0069d9;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__delete-event {
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #e04522;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__delete-event:hover {
+    background-color: #d32f2f;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.btn__edit-event {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__edit-event:hover {
+    background-color: #ffab00;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+/* Style for the table container */
+.wrap__event-list {
+    width: 100%;
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic table styling */
+.table__event {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+/* Header styling */
+.table__event thead th {
+    padding: 12px 15px;
+    background-color: #f4f4f4;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Body styling */
+.table__event tbody td {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+    color: #333;
+}
+
+/* Center align the text in the table */
+.table__event th, .table__event td {
+    text-align: center;
+}
+
+/* Make rows alternate background colors for better readability */
+.table__event tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Add a subtle hover effect for rows */
+.table__event tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .table__event thead {
+        display: none;
+    }
+
+    .table__event tbody tr {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    .table__event tbody td {
+        display: block;
+        text-align: right;
+        padding: 10px;
+        position: relative;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .table__event tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 15px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../assets/css/admin.css">
+</head>
+<body onload="time()">
+    <div class="common">
+        <div class="sidebar">
+            <div class="sidebar__user">
+                <p class="sidebar__user-name">Admin</p>
+                <p class="sidebar__user-designation">Chào mừng bạn trở lại</p>
+            </div>
+            <div class="sidebar__menu">
+                <ul class="sidebar__menu-list">
+                    <li>
+                        <a href="#" class="sidebar__menu-item action" data-target="content__home">
+                            Trang chủ
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar__menu-item " data-target="content__products">
+                            Quản lý sản phẩm
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar__menu-item " data-target="content__news">
+                            Quản lý tin tức
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="sidebar__menu-item " data-target="content__events">
+                            Quản lý sự kiện
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content__header">
+                <div id="clock"></div>
+                <a href="" id="logoutButton" class="logout">Đăng Xuất</a>
+            </div>
+            <div class="content__body" id="content__home">
+                <div class="content__title">Trang chủ</div>
+            </div>
+
+            <div class="content__body" id="content__products">
+                <div class="content__title">Quản lý sản phẩm</div>
+                <div class="wrap-content__enter">
+                    <div class="content__enter">
+                        <!-- search bar -->
+                        <div class="wrap__search">
+                            <input type="text" class="input__search" placeholder="Tìm kiếm theo tên..." id="searchInput">
+                            <button class="btn__search" type="button" onclick="searchProduct()">Tìm kiếm</button>
+                        </div>
+
+                        <!-- product information entry form  -->
+                        <div class="wrap__enter-info">
+                            <div class="item__enter-info">
+                                <label for="image">Ảnh sản phẩm</label>
+                                <input type="file" name="image" id="inputProductImage" accept="image/*">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="price">Giá sản phẩm</label>
+                                <input type="number" name="price" id="inputProductPrice" placeholder="Giá">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="name">Tên sản phẩm</label>
+                                <input type="text" name="name" id="inputProductName" placeholder="Tên sản phẩm">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="link">Link</label>
+                                <input type="text" name="link" id="inputProductLink" placeholder="Link">
+                            </div>
+                        </div>
+                    
+                        <!-- btn -->
+                        <button class="btn__add-product" onclick="addProduct()">Thêm sản phẩm</button>
+                        <button class="btn__update-product" onclick="updateProduct()">Cập nhật</button>
+                    
+                        <!-- table products -->
+                        <div class="wrap__product-list">
+                            <table class="table__product" id="productTable">
+                                <thead>
+                                    <tr>
+                                        <th>Hình ảnh</th>
+                                        <th>Giá</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Link</th>
+                                        <th>Tính năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="productList"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <script src="../js/admin/product.js"></script>
+            </div>
+
+            <div class="content__body" id="content__news">
+                <div class="content__title">Quản lý tin tức</div>
+                <div class="wrap-content__enter">
+                    <div class="content__enter">
+                        <!-- News information entry form  -->
+                        <div class="wrap__enter-info">
+                            <div class="item__enter-info">
+                                <label for="image">Ảnh tin tức</label>
+                                <input type="file" name="image" id="inputNewsImage" accept="image/*">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="title">Tiêu đề</label>
+                                <input type="text" name="title" id="inputNewsTitle" placeholder="Tiêu đề">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="content">Nội dung</label>
+                                <input type="text" name="content" id="inputNewsContent" placeholder="Nội dung">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="link">Link</label>
+                                <input type="text" name="link" id="inputNewsLink" placeholder="Link">
+                            </div>
+                        </div>
+                        
+                        <!-- btn -->
+                        <button class="btn__add-news" onclick="addNews()">Thêm tin tức</button>
+                        <button class="btn__update-news" onclick="updateNews()">Cập nhật</button>
+                        
+                        <!-- table news -->
+                        <div class="wrap__news-list">
+                            <table class="table__news" id="newsTable">
+                                <thead>
+                                    <tr>
+                                        <th>Hình ảnh</th>
+                                        <th>Tiêu đề</th>
+                                        <th>Nội dung</th>
+                                        <th>Link</th>
+                                        <th>Tính năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="newsList"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <script src="../js/admin/news.js"></script>
+            </div>
+
+            <div class="content__body" id="content__events">
+                <div class="content__title">Quản lý sự kiện</div>
+                <div class="wrap-content__enter">
+                    <div class="content__enter">
+                        <!-- Event information entry form  -->
+                        <div class="wrap__enter-info">
+                            <div class="item__enter-info">
+                                <label for="image">Ảnh sự kiện</label>
+                                <input type="file" name="image" id="inputEventImage" accept="image/*">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="title">Tiêu đề</label>
+                                <input type="text" name="title" id="inputEventTitle" placeholder="Tiêu đề">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="content">Nội dung</label>
+                                <input type="text" name="content" id="inputEventContent" placeholder="Nội dung">
+                            </div>
+                            <div class="item__enter-info">
+                                <label for="link">Link</label>
+                                <input type="text" name="link" id="inputEventLink" placeholder="Link">
+                            </div>
+                        </div>
+                        
+                        <!-- btn -->
+                        <button class="btn__add-event" onclick="addEvent(event)">Thêm sự kiện</button>
+                        <button class="btn__update-event" onclick="updateEvent()">Cập nhật</button>
+                        
+                        <!-- table news -->
+                        <div class="wrap__event-list">
+                            <table class="table__event" id="eventTable">
+                                <thead>
+                                    <tr>
+                                        <th>Hình ảnh</th>
+                                        <th>Tiêu đề</th>
+                                        <th>Nội dung</th>
+                                        <th>Link</th>
+                                        <th>Tính năng</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="eventList"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <script src="../js/admin/event.js"></script>
+            </div>
+
+        </div>
+    </div>
+    <script src="../js/admin/main.js"></script>
+</body>
+</html>

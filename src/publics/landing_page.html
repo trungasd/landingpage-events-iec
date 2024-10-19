@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Landing Page</title>
+      <link rel="manifest" href="../assets/favicon/manifest.json" />
+      <meta name="msapplication-TileColor" content="#ffffff" />
+      <meta
+        name="msapplication-TileImage"
+        content="../assets/favicon/ms-icon-144x144.png"
+      />
+      <meta name="theme-color" content="#ffffff" />
+
+      <!-- Embed fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Sora:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+
+      <!-- Reset CSS -->
+      <link rel="stylesheet" href="../assets/css/reset.css" />
+      <link rel="stylesheet" href="../assets/css/styles.css" />
+      <link rel="stylesheet" href="../assets/css/reponsive/styles.css" />
+    </head>
+  </head>
+  <body>
+    <div id="main">
+      <div class="header-top">
+        <a href="/">
+          <div class="logo">
+            <img src="../assets/img/logo.webp" alt="" class="logo-iec" />
+          </div>
+        </a>
+        <nav class="navbar">
+          <ul class="navbar__list">
+            <li class="navbar__item">
+              <a href="#" class="navbar__link">Home</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#about" class="navbar__link">About</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#product" class="navbar__link">Products</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#tour" class="navbar__link">Tour</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#news" class="navbar__link">News/Events</a>
+            </li>
+            <li class="navbar__item">
+              <a href="#contact" class="navbar__link">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <header class="header">
+        <div class="container">
+          <section class="hero">
+            <section class="hero__content">
+              <h1 class="hero__heading">
+                Business to achieve goals effectively and efficiently.
+              </h1>
+              <p class="hero__desc">
+                Save time and get reliable results quckly.
+              </p>
+              <div class="hero__row">
+                <a
+                  href="https://iecgroup.vn/capabilities"
+                  class="btn"
+                  target="_blank"
+                  >View Our Work</a
+                >
+                <span class="hero__phone"> or call (123) 456-7890 </span>
+              </div>
+            </section>
+            <div class="hero__media">
+              <figure class="hero__images">
+                <img src="../assets/img/header1.webp" alt="" class="hero__img" />
+                <img src="../assets/img/header2.webp" alt="" class="hero__img" />
+              </figure>
+            </div>
+          </section>
+        </div>
+      </header>
+
+      <!-- About -->
+      <section id="about">
+        <div class="container">
+          <h2 class="about__heading section-heading">About Us</h2>
+          <div class="about__row">
+            <figure>
+              <img
+                src="../assets/img/about_img.png"
+                alt=""
+                class="about__img"
+              />
+            </figure>
+            <div>
+              <div class="about__list">
+                <section class="about-item">
+                  <div class="about-item__body">
+                    <p class="about-item__desc">
+                      IEC Group is an enterprise specializing in providing
+                      optimal foreign language teaching and learning solutions
+                      suitable for the majority of Vietnamese people. In
+                      addition to providing software, books and learning
+                      equipment for students, constantly improving the quality
+                      of teaching, we also work directly with customers to
+                      advise on financial and operational strategies.
+                    </p>
+                    <p class="about-item__desc">
+                      Our work covers a wide range of public, private and social
+                      sector institutions, spanning from K-12 schools, colleges,
+                      universities and language centers.
+                    </p>
+                  </div>
+                </section>
+              </div>
+              <a href="https://iecgroup.vn/about" class="btn" target="_blank"
+                >More About Us</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- product -->
+      <section id="product">
+        <div class="container">
+          <header class="product__header">
+            <h2 class="section-heading">Products</h2>
+            <a
+              href="https://iecgroupstore.com/collections/all"
+              class="btn product__cta"
+              target="_blank"
+            >
+              Our Products
+            </a>
+          </header>
+
+          <div class="product__list" id="product-list">
+            <!-- Các sản phẩm sẽ được thêm động ở đây -->
+          </div>
+
+          <script src="/src/js/productMain.js"></script>
+
+          <div class="product__control control"></div>
+        </div>
+      </section>
+
+      <!-- tour -->
+      <section id="tour">
+        <div class="container">
+          <div class="tour__inner">
+            <div class="tour__media">
+              <figure class="tour__images">
+                <img
+                  src="../assets/img/event_tour.png"
+                  alt=""
+                  class="tour__img"
+                />
+                <img
+                  src="../assets/img/event_tour2.png"
+                  alt=""
+                  class="tour__img"
+                />
+              </figure>
+            </div>
+            <section class="tour__content">
+              <h2 class="section-heading">UNIVERSITY TOUR EVENT</h2>
+              <p class="section-desc">
+                Preparing Students for Global Communication and the Workplace
+              </p>
+              <a
+                href="https://iecgroup.vn/voices-university-tour-2022"
+                class="btn tour__cta"
+                target="_blank"
+                >Learn More</a
+              >
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section id="news">
+        <div class="container">
+          <div class="news__inner">
+            <section class="news__content">
+              <h2 class="news__heading section-heading">
+                Read Latest News & Events.
+              </h2>
+              <a href=" " class="news__more" target="_blank">Read All Blog</a>
+              <div class="news__control control"></div>
+            </section>
+            <div class="news__list" id="news-list"></div>
+            <script src="../js/newsMain.js"></script>
+            <script src="../js/eventMain.js"></script>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="container">
+          <div class="contact__inner">
+            <h2 class="contact__heading section-heading">IEC Group</h2>
+            <p class="contact__desc section-desc">
+              Address:<br />
+              Office - 6/21 Do Son, Ward 4, Tan Binh District, Ho Chi Minh
+              City<br />
+              Warehouse - 6/21 Do Son, Ward 4, Tan Binh District, Ho Chi Minh
+              City<br />
+              Phone: 028 224 77 686 <br />
+              Email: info@iecgroup.vn
+            </p>
+            <a href="https://iecgroup.vn/contact" class="btn" target="_blank"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer id="footer">
+        <p class="footer__title">
+          &copy; Copyright (R) 2021. IEC Group Consulting all rights reserved.
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>

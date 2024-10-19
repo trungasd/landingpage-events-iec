@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Landing Page</title>
+        <link rel="manifest" href="./assets/favicon/manifest.json" />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta
+            name="msapplication-TileImage"
+            content="./assets/favicon/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#ffffff" />
+
+        <!-- Embed fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Sora:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Reset CSS -->
+        <link rel="stylesheet" href="./assets/css/reset.css" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <!-- Header top -->
+            <div class="header-top">
+                <!-- Logo -->
+                <a href="/">
+                    <div class="logo">
+                        <img src="./assets/img/logo.webp" alt="" class="logo-iec">
+                    </div>
+                </a>
+
+                <!-- Navbar -->
+                <nav class="navbar">
+                    <ul class="navbar__list">
+                        <li class="navbar__item">
+                            <a
+                                href="#!"
+                                class="navbar__link "
+                                >Home</a
+                            >
+                            <li class="navbar__item">
+                                <a href="#about" class="navbar__link">About</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#tour" class="navbar__link">Tour</a>
+                            </li>
+                            <li class="navbar__item">
+                                <a href="#news" class="navbar__link">News</a>
+                            </li>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Action -->
+                <div class="header-action">
+                    <a href="#!" class="header-action__login">Log In</a>
+                    <button href="#!" class="btn header-action__signup">
+                        Sign Up
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero -->
+            <section class="hero">
+                <!-- Hero content -->
+                <section class="hero__content">
+                    <h1 class="hero__heading">
+                        Business to achieve goals effectively and efficiently.
+                    </h1>
+                    <p class="hero__desc">
+                        Save time and get reliable results quckly.
+                    </p>
+                    <div class="hero__row">
+                        <a href="https://iecgroup.vn/capabilities" class="btn">View Our Work</a>
+                        <span class="hero__phone">
+                            or call (123) 456-7890
+                        </span>
+                    </div>
+                </section>
+
+                <!-- Hero media -->
+                <div class="hero__media">
+                    <figure class="hero__images">
+                        <img
+                            src="./assets/img/header1.webp"
+                            alt=""
+                            class="hero__img"
+                        />
+                        <img
+                            src="./assets/img/header2.webp"
+                            alt=""
+                            class="hero__img"
+                        />
+                    </figure>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <!-- About -->
+    <section id="about">
+        <div class="container">
+            <h2 class="about__heading section-heading">
+                About Us
+            </h2>
+            <div class="about__row">
+                <figure>
+                    <img
+                        src="./assets/img/about_img.png"
+                        alt=""
+                        class="about__img"
+                    />
+                </figure>
+                <div>
+                    <div class="about__list">
+                        <!-- about item 1 -->
+                        <section class="about-item">
+                            <div class="about-item__body">
+                                <p class="about-item__desc">
+                                    IEC Group is an enterprise specializing in providing optimal foreign language teaching and learning solutions suitable for the majority of Vietnamese people. In addition to providing software, books and learning equipment for students, constantly improving the quality of teaching, we also work directly with customers to advise on financial and operational strategies.
+                                </p>
+                                <p class="about-item__desc">
+                                    Our work covers a wide range of public, private and social sector institutions, spanning from K-12 schools, colleges, universities and language centers.
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                    <a href="https://iecgroup.vn/about" class="btn">More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- tour -->
+     <section id="tour">
+        <div class="container">
+            <div class="tour__inner">
+                <div class="tour__media">
+                    <figure class="tour__images">
+                        <img
+                            src="./assets/img/event_tour.png"
+                            alt=""
+                            class="tour__img"
+                        />
+                        <img
+                            src="./assets/img/event_tour2.png"
+                            alt=""
+                            class="tour__img"
+                        />
+                    </figure>
+                </div>
+                <section class="tour__content">
+                    <h2 class="section-heading">
+                        UNIVERSITY TOUR EVENT
+                    </h2>
+                    <p class="section-desc">
+                        Preparing Students for Global Communication and the Workplace
+                    </p>
+                    <a href="https://iecgroup.vn/voices-university-tour-2022" class="btn tour__cta">Learn More</a>
+                </section>
+            </div>
+        </div>
+    </section>
+
+    <!-- News -->
+    <section id="news">
+        <div class="container">
+            <div class="news__inner">
+                <section class="news__content">
+                    <h2 class="news__heading section-heading">
+                        Read Latest News & Events.
+                    </h2>
+                    <a href="https://iecgroup.vn/news-event" class="news__more">Read All Blog</a>
+                    <div class="news__control control">
+                        <!-- Previous -->
+                        <button class="control__btn">
+                            <svg
+                                width="6"
+                                height="12"
+                                viewBox="0 0 6 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.5 1L0.5 6L5.5 11"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+
+                        <!-- Next -->
+                        <button class="control__btn">
+                            <svg
+                                class="control-next-icon"
+                                width="6"
+                                height="12"
+                                viewBox="0 0 6 12"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M5.5 1L0.5 6L5.5 11"
+                                    stroke="currentColor"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+                <div class="news__list">
+                    <!-- News item 1 -->
+                    <article class="news-item">
+                        <figure class="news-item__thumb">
+                            <a href="#!">
+                                <img
+                                    src="./assets/img/news1.png"
+                                    alt=""
+                                    class="news-item__img"
+                                />
+                            </a>
+                        </figure>
+                        <section class="news-item__body">
+                            <h3>
+                                <a href="https://iecgroup.vn/elsa-speak-ky-ket-hop-tac-doc-quyen-voi-iec-group" class="news-item__heading">
+                                    ELSA Speak ký kết hợp tác độc quyền với IEC Group
+                                </a>
+                            </h3>
+                            <p class="news-item__desc">
+                                Lễ ký kết hợp tác độc quyền giữa ELSA Speak và Công ty cổ phần đầu tư IEC Group, đơn vị chuyên cung cấp các giải pháp, tài liệu dạy và học ngoại ngữ tối ưu từ các tổ chức giáo dục hàng đầu thế giới
+                            </p>
+                            <a href="https://iecgroup.vn/elsa-speak-ky-ket-hop-tac-doc-quyen-voi-iec-group" class="news-item__more">
+                                Learn More
+                            </a>
+                        </section>
+                    </article>
+
+                    <!-- News item 2 -->
+                    <article class="news-item">
+                        <figure class="news-item__thumb">
+                            <a href="#!">
+                                <img
+                                    src="./assets/img/news2.jpg"
+                                    alt=""
+                                    class="news-item__img"
+                                />
+                            </a>
+                        </figure>
+                        <section class="news-item__body">
+                            <h3>
+                                <a href="https://iecgroup.vn/thap-sang-ngon-lua-dem-trang-2022" class="news-item__heading">
+                                    Thắp sáng Ngọn Lửa Đêm Trăng 2022
+                                </a>
+                            </h3>
+                            <p class="news-item__desc">
+                                Với mong muốn mang Tết Trung Thu ấm áp đến với trẻ em nghèo, trẻ em có hoàn cảnh đặc biệt, IEC Group đã phối hợp cùng ...
+                            </p>
+                            <a href="https://iecgroup.vn/thap-sang-ngon-lua-dem-trang-2022" class="news-item__more">
+                                Learn More
+                            </a>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <secttion id="contact">
+        <div class="container">
+            <div class="contact__inner">
+                
+            </div>
+        </div>
+    </secttion>
+
+
+
+</body>
+</html>
